@@ -1,0 +1,44 @@
+/* reset.css - シンプルで穏やかなリセット（日本語コメント付き）
+   - ブラウザ間の差を抑え、ベースを整えるための最小限のリセット
+   - 必要に応じて調整してください
+*/
+
+html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+ol, ul, menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img, picture, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
