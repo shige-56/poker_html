@@ -69,6 +69,7 @@ width: 95%;
     height: 95%;
     margin: 0 auto;
     padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
 }
 
 .wrap p {
@@ -87,7 +88,7 @@ width: 95%;
     background-repeat: no-repeat;
     background-position: center top;
     color: #000;
-    height: 100vh;
+    height: 100%;
 }
 
 #about .wrap-bg-white h3,#about .wrap-bg-white p {
