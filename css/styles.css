@@ -1,14 +1,13 @@
 /* ベーシックなスタイル */
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Zen+Antique&display=swap');
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Libre Baskerville", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+    font-family: "Zen Antique", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 html,
@@ -43,6 +42,9 @@ h3 {
     font-size: 2rem;
 }
 
+img {
+vertical-align: bottom;}
+
 #concept div.wrap-bg{
     background-image: url("../images/concept_bg.JPG");
     background-size: cover;
@@ -55,6 +57,13 @@ h3 {
     width: 95%;
     margin: 0 auto;
 padding: 1.6rem 0;
+}
+
+#concept h2 {
+background-image: url("../images/top5.JPG");
+background-size: cover;
+background-repeat: no-repeat;
+padding: 8rem 0;
 }
 
 .wrap-bg-white{
@@ -103,16 +112,18 @@ margin: 0 auto;
 .container {
     max-width: 100%;
     margin: 0 auto;
-    padding: 0 0 77px;
+    padding: 0;
     position: relative;
 }
 
 .site-header h1 {
     width: 100%;
     text-align: center;
-    font-size: 8vh;
+    font-size: 7.4vh;
     position: absolute;
-    bottom: 0;
+    bottom: -41%;
+    line-height: 4rem;
+    z-index: 1;
 }
 
 
