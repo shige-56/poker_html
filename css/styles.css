@@ -46,7 +46,7 @@ img {
 vertical-align: bottom;}
 
 #concept div.wrap-bg{
-    background-image: url("../images/concept_bg.JPG");
+    background-image: url("../images/IMG_0499.JPG");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -85,6 +85,10 @@ width: 95%;
     padding: 1.6rem 0 3.2rem;
     font-size: 1.2rem;
 }
+
+
+#product {
+background-color: rgba(255, 255, 255, 0.6);}
 
 #product .wrap p {
     width: 95%;
