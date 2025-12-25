@@ -339,7 +339,7 @@ scroll_up ｜下から上へ出現
 
   .wrap-bg-white {
     height: auto;
-    padding: 40px 0;
+    padding: 1rem 0;
   }
 
   .wrap h3,
