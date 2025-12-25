@@ -156,8 +156,8 @@ li {
 }
 
 .site-header {
-  width: 100%;
-  max-width: 980px;
+  width: 980px;
+  margin: 0 auto;
   position: relative;
 }
 
@@ -178,14 +178,12 @@ li {
 
 .header-heading {
   position: absolute;
-  left: 0;
-  right: 0;
   width: 100%;
   z-index: 1;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 25%;
   margin: 0 auto;
-  text-align: center;
+}
+
 .site-header h1 {
   width: 100%;
   text-align: center;
