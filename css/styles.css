@@ -23,7 +23,7 @@ body,
   background-image: url("../images/bgi.png");
   background-attachment: fixed;
   /* デスクトップでは背景幅を100%にする */
-
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom center;
   height: fit-content;
