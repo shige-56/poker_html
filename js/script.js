@@ -40,7 +40,7 @@ const swiper2 = new Swiper('.swap2', {
 
 /* スクロールで要素を上にフェードする（jQuery不要） */
 (function () {
-  var scrollAnimationElm = document.querySelectorAll('.scroll_up');
+  var scrollAnimationElm = document.querySelectorAll('.scroll_up , .scroll_left , .scroll_right');
   var scrollAnimationFunc = function () {
     for (var i = 0; i < scrollAnimationElm.length; i++) {
       var triggerMargin = 100;
