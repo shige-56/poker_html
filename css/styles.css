@@ -39,6 +39,10 @@ footer {
   margin: 0 auto;
 }
 
+#concept h2 {
+padding: 2rem 0;
+}
+
 h2 {
   text-align: center;
   font-size: 2.6rem;
@@ -55,6 +59,14 @@ h4 {
 
 img {
   vertical-align: bottom;
+}
+
+.concept-cont-text ul {
+  list-style: disc;
+}
+
+.concept-cont-text ul li {
+  margin-left: 0;
 }
 
 #concept div.wrap-bg {
