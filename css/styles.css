@@ -17,6 +17,10 @@ body,
   height: 100%;
 }
 
+strong {
+  font-weight: bold;
+}
+
 .bg {
   color: #fff;
   line-height: 1.5;
