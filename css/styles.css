@@ -77,8 +77,12 @@ img {
 .concept-cont-text ul {
   list-style: disc;
   list-style-position: inside;
-  background-color: rgba(255, 255, 255, 0.699);
   padding-left: 0.5rem;
+  color: #000;
+	-webkit-text-stroke: 0.03px #282828;
+	text-shadow: #fff 1px 1px 2px, #fff -1px 1px 2px,
+	#fff 1px -1px 2px, #fff -1px -1px 2px;;
+  
 }
 
 .concept-cont-text ul li {
@@ -124,6 +128,7 @@ li {
   padding: 0;
 }
 
+
 .concept-wrap {
   background: linear-gradient(rgba(255, 255, 255, 0.5)), url("../images/IMG_0499.JPG");
   background-size: cover;
@@ -135,6 +140,10 @@ li {
 
 #profile {
   background-color: rgba(255, 255, 255, 0.6);
+}
+
+#profile h2 {
+      padding: 6rem 0 4rem;
 }
 
 #profile .wrap p,
@@ -246,7 +255,7 @@ h4 {
   background-image: url("../images/IMG_0500.JPG");
   background-size: 206%;
   background-position: center -1rem;
-  margin: 0 auto 1em;
+  margin: 0 auto 4rem;
 }
 
 .profile-text {
@@ -263,6 +272,7 @@ h4 {
 .profile-text th {
   width: 20%;
   text-align: left;
+  vertical-align: text-top;
 }
 
 .profile-text td {
