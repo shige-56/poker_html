@@ -58,29 +58,3 @@ const swiper2 = new Swiper('.swap2', {
   window.addEventListener('resize', scrollAnimationFunc);
 })();
 
-/* ヘッダーを読み込み時にフェードインさせる */
-(function () {
-  var header = document.querySelector('.site-header, .scroll_right');
-  if (!header) return;
-
-  // 初期スタイルを設定（JSで行うことで追加のCSS編集を不要にする）
-  header.style.opacity = '0';
-  header.style.transform = 'translateY(-20px)';
-  header.style.transition = 'opacity 600ms ease, transform 600ms ease';
-
-  var showHeader = function () {
-    // repaint を確実に行ってからスタイルを変更
-    requestAnimationFrame(function () {
-      header.style.opacity = '1';
-      header.style.transform = 'translateY(0)';
-    });
-  };
-
-  // load と DOMContentLoaded の両方に対応
-  if (document.readyState === 'complete') {
-    showHeader();
-  } else {
-    window.addEventListener('load', showHeader);
-  }
-})();
-
