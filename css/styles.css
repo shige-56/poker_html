@@ -317,7 +317,20 @@ scroll_right ｜右から出現
     -moz-opacity: 1.0;
     transform: translateX(0);
 }
+.fead_right {
+  animation: fadeIn 0.8s ease 1s 1 normal backwards;
+}
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
 /* レスポンシブ: タブレット (<=768px) */
 @media (max-width: 768px) {
