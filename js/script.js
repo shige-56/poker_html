@@ -84,16 +84,35 @@ const swiper2 = new Swiper('.swap2', {
   }
 })();
 
-/* iOS 判定: iPhone / iPad のときに <html> に .ios を付与する */
+/* iOS 固定背景のための要素を追加（iPhone / iPad 対応） */
 (function () {
   try {
     var ua = navigator.userAgent || navigator.vendor || window.opera;
     var isIOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-    if (isIOS) {
-      document.documentElement.classList.add('ios');
+    if (!isIOS) return;
+
+    // body の背景は iOS では固定されないため、.bg-fixed 要素を挿入して代替する
+    if (!document.querySelector('.bg-fixed')) {
+      var bg = document.createElement('div');
+      bg.className = 'bg-fixed';
+      bg.setAttribute('aria-hidden', 'true');
+      document.body.insertBefore(bg, document.body.firstChild);
     }
+
+    // HTML に .ios クラスを付与（他の iOS 固有スタイルを適用する場合に使用）
+    document.documentElement.classList.add('ios');
+
+    // orientationchange/resized 時の簡易リフレッシュ（display 切替で repaint を促す）
+    var refresh = function () {
+      var el = document.querySelector('.bg-fixed');
+      if (!el) return;
+      el.style.display = 'none';
+      setTimeout(function () { el.style.display = ''; }, 50);
+    };
+    window.addEventListener('orientationchange', refresh);
+    window.addEventListener('resize', refresh);
   } catch (e) {
-    // fail silently
+    // silent
   }
 })();
 
