@@ -1,47 +1,31 @@
 
 //  swiper
  const swiper1 = new Swiper('.swap1', {
+      slidesPerView: 3,
       loop: true,
       direction: getDirection(),
-      slidesPerView: 3,
-      breakpoints: {
-        0: {
-          slidesPerView: 1,
-        },
-        576: {
-          slidesPerView: 2,
-        },
-        1024: {
-          slidesPerView: 3,
-        },
-      },
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
       on: {
         resize: function () {
-          // 既存の direction と異なる場合のみ変更する（余計な再描画を避ける）
-          var newDir = getDirection();
-          if (this.params.direction !== newDir) {
-            this.changeDirection(newDir);
-          }
+          swiper.changeDirection(getDirection());
         },
       },
     });
 
     function getDirection() {
-      return window.innerWidth <= 768 ? 'vertical' : 'horizontal';
+      var windowWidth = window.innerWidth;
+      var direction = window.innerWidth <= 70 ? 'vertical' : 'horizontal';
+
+      return direction;
     }
 
 const swiper2 = new Swiper('.swap2', {
+    // パラメータの指定
     loop: true,
-    slidesPerView: 3,
-    breakpoints: {
-      0: { slidesPerView: 1 },
-      576: { slidesPerView: 2 },
-      1024: { slidesPerView: 3 },
-    },
+
     // ページネーション
     pagination: {
       el: '.swiper-pagination',
@@ -97,38 +81,6 @@ const swiper2 = new Swiper('.swap2', {
     showHeader();
   } else {
     window.addEventListener('load', showHeader);
-  }
-})();
-
-/* iOS 固定背景のための要素を追加（iPhone / iPad 対応） */
-(function () {
-  try {
-    var ua = navigator.userAgent || navigator.vendor || window.opera;
-    var isIOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-    if (!isIOS) return;
-
-    // body の背景は iOS では固定されないため、.bg-fixed 要素を挿入して代替する
-    if (!document.querySelector('.bg-fixed')) {
-      var bg = document.createElement('div');
-      bg.className = 'bg-fixed';
-      bg.setAttribute('aria-hidden', 'true');
-      document.body.insertBefore(bg, document.body.firstChild);
-    }
-
-    // HTML に .ios クラスを付与（他の iOS 固有スタイルを適用する場合に使用）
-    document.documentElement.classList.add('ios');
-
-    // orientationchange/resized 時の簡易リフレッシュ（display 切替で repaint を促す）
-    var refresh = function () {
-      var el = document.querySelector('.bg-fixed');
-      if (!el) return;
-      el.style.display = 'none';
-      setTimeout(function () { el.style.display = ''; }, 50);
-    };
-    window.addEventListener('orientationchange', refresh);
-    window.addEventListener('resize', refresh);
-  } catch (e) {
-    // silent
   }
 })();
 

@@ -486,23 +486,3 @@ scroll_up ｜下から上へ出現
     padding-top: 0;
   }
 }
-
-/* iOS 固定背景対応 */
-/* iOS では background-attachment: fixed が効かないため、
-   body の背景を無効化して .bg-fixed を挿入する実装にしています */
-.ios body {
-  background-image: none !important;
-  background-attachment: scroll !important;
-}
-
-/* 挿入される固定背景要素 */
-.bg-fixed {
-  position: fixed;
-  inset: 0; /* top:0; right:0; bottom:0; left:0 */
-  z-index: -9999; /* 最背面に配置 */
-  background-image: url('../images/bgi.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  pointer-events: none; /* ユーザー操作を妨げない */
-}
