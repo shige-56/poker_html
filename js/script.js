@@ -10,14 +10,14 @@
       },
       on: {
         resize: function () {
-          this.changeDirection(getDirection());
+          swiper.changeDirection(getDirection());
         },
       },
     });
 
     function getDirection() {
       var windowWidth = window.innerWidth;
-      var direction = windowWidth <= 768 ? 'vertical' : 'horizontal';
+      var direction = window.innerWidth <= 70 ? 'vertical' : 'horizontal';
 
       return direction;
     }
@@ -81,19 +81,6 @@ const swiper2 = new Swiper('.swap2', {
     showHeader();
   } else {
     window.addEventListener('load', showHeader);
-  }
-})();
-
-/* iOS 判定: iPhone / iPad のときに <html> に .ios を付与する */
-(function () {
-  try {
-    var ua = navigator.userAgent || navigator.vendor || window.opera;
-    var isIOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-    if (isIOS) {
-      document.documentElement.classList.add('ios');
-    }
-  } catch (e) {
-    // fail silently
   }
 })();
 
