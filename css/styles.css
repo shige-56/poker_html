@@ -483,3 +483,57 @@ h4 {
     padding-top: 0;
 }
 }
+
+/* ---------------------------------------
+   iPhone / iPad のみに適用するスタイル
+   
+   - より確実に iOS のみに効かせたい場合は、
+     上で追加した JS によって HTML に付与される `.ios` を利用してください。
+   - CSS 単体での判定はデバイス幅やピクセル比に依存するため、
+     完全に正確ではない点に注意してください。
+----------------------------------------*/
+
+/* 例: .ios クラスを使って iOS のみ適用 */
+.ios .site-header {
+  /* iPhone/iPad のときにヘッダーの表示を微調整したい場合 */
+  /* ここに iOS 専用のスタイルを記述してください */
+}
+
+/* iPhone（一般的な幅） */
+@media only screen and (max-device-width: 926px) and (-webkit-min-device-pixel-ratio: 2) {
+  /* ここに iPhone 専用スタイルを記述 */
+  .ios body {
+  color: #fff;
+  line-height: 1.5;
+  background-image: url("../images/bgi.png");
+  background-attachment:unset;
+  /* デスクトップでは背景幅を100%にする */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  position: fixed;
+  z-index: -1;
+  height: 100vh;
+}
+}
+
+/* iPad（標準〜Pro） */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1) {
+  /* ここに iPad 専用スタイルを記述 */
+  .ios body {
+  color: #fff;
+  line-height: 1.5;
+  background-image: url("../images/bgi.png");
+  background-attachment: fixed;
+  /* デスクトップでは背景幅を100%にする */
+  background-size: cover;
+  background-repeat: unset;
+  background-position: bottom center;
+  position: fixed;
+  z-index: -1;
+  height: 100vh;
+}
+}
+
+/* 小さな注意: iPadOS はデスクトップ表示になることがあり、その場合 device-width に頼る方法が効かないことがあります。
+   より確実に分岐したい場合は、JS で判定して body/html にクラスを付ける方法（上記）を推奨します。 */
