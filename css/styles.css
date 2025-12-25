@@ -102,6 +102,10 @@ img {
 
 }
 
+#about .wrap-bg-white {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
 .wrap {
   width: 95%;
   margin: 0 auto;
@@ -239,9 +243,9 @@ h4 {
   width: 40%;
   aspect-ratio: 1;
   border-radius: 50%;
-  background-image: url("../images/IMG_0256.JPG");
-  background-size: 180%;
-  background-position: center;
+  background-image: url("../images/IMG_0500.JPG");
+  background-size: 206%;
+  background-position: center -1rem;
   margin: 0 auto 1em;
 }
 
@@ -319,6 +323,7 @@ scroll_right ｜右から出現
     -moz-opacity: 1.0;
     transform: translateX(0);
 }
+
 .fead_right {
   animation: fadeIn 0.8s ease 1s 1 normal backwards;
 }
@@ -332,6 +337,10 @@ scroll_right ｜右から出現
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+.concept1 h2 {
+  padding: 1rem 0 0;
 }
 
 /* レスポンシブ: タブレット (<=768px) */
@@ -489,6 +498,10 @@ scroll_right ｜右から出現
 
   h2 {
     font-size: 2rem;
+  }
+
+  .profile-img {
+    width: 55%; 
   }
 
   h3,strong {
