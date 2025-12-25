@@ -60,7 +60,7 @@ const swiper2 = new Swiper('.swap2', {
 
 /* ヘッダーを読み込み時にフェードインさせる */
 (function () {
-  var header = document.querySelector('.site-header');
+  var header = document.querySelector('.site-header, .scroll_right');
   if (!header) return;
 
   // 初期スタイルを設定（JSで行うことで追加のCSS編集を不要にする）
