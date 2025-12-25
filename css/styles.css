@@ -112,7 +112,7 @@ img {
 .wrap p,
 table,
 li {
-  padding: 1.6rem 0 3.2rem;
+  padding: 1.6rem 0 0.2rem;
   font-size: 1.2rem;
 }
 
