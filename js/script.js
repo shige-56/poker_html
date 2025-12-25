@@ -1,31 +1,47 @@
 
 //  swiper
  const swiper1 = new Swiper('.swap1', {
-      slidesPerView: 3,
       loop: true,
       direction: getDirection(),
+      slidesPerView: 3,
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        576: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      },
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
       on: {
         resize: function () {
-          this.changeDirection(getDirection());
+          // 既存の direction と異なる場合のみ変更する（余計な再描画を避ける）
+          var newDir = getDirection();
+          if (this.params.direction !== newDir) {
+            this.changeDirection(newDir);
+          }
         },
       },
     });
 
     function getDirection() {
-      var windowWidth = window.innerWidth;
-      var direction = windowWidth <= 768 ? 'vertical' : 'horizontal';
-
-      return direction;
+      return window.innerWidth <= 768 ? 'vertical' : 'horizontal';
     }
 
 const swiper2 = new Swiper('.swap2', {
-    // パラメータの指定
     loop: true,
-
+    slidesPerView: 3,
+    breakpoints: {
+      0: { slidesPerView: 1 },
+      576: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 },
+    },
     // ページネーション
     pagination: {
       el: '.swiper-pagination',
