@@ -247,7 +247,7 @@ h4 {
 
 .profile-text {
   max-width: 600px;
-  width: 100%;
+  width: 95%;
   margin: 0 auto;
 }
 
@@ -257,11 +257,13 @@ h4 {
 }
 
 .profile-text th {
-  width: 40%;
+  width: 20%;
+  text-align: left;
 }
 
 .profile-text td {
-  width: 60%;
+  width: 70%;
+  text-align: left;
 }
 
 #about li div {
