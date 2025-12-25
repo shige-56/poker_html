@@ -2,146 +2,233 @@
 @import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Zen+Antique&display=swap');
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Zen Antique", serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Zen Antique", serif;
   font-weight: 400;
   font-style: normal;
 }
 
 html,
 body {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 body {
-    color: #fff;
-    line-height: 1.5;
-    background-image: url("../images/bgi.png");
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: bottom center;
+  color: #fff;
+  line-height: 1.5;
+  background-image: url("../images/bgi.png");
+  background-attachment: fixed;
+  /* デスクトップでは背景幅を100%にする */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
 }
 
 main,
 footer {
-    width: 980px;
-    margin: 0 auto;
+  width: 980px;
+  margin: 0 auto;
 }
 
 h2 {
-    text-align: center;
-    font-size: 2.6rem;
-    padding: 6rem 0 ;
+  text-align: center;
+  font-size: 2.6rem;
+  padding: 6rem 0;
 }
 
 h3 {
-    font-size: 2rem;
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
 }
 
 img {
-vertical-align: bottom;}
-
-#concept div.wrap-bg{
-    background-image: url("../images/IMG_0499.JPG");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    color: #000;
+  vertical-align: bottom;
 }
 
-#concept div.wrap-bg h3,.wrap h3{
-    width: 95%;
-    margin: 0 auto;
-padding: 1.6rem 0;
+#concept div.wrap-bg {
+  background-image: url("../images/IMG_0499.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #000;
 }
 
-#concept h2 {
-background-image: url("../images/top5.JPG");
-background-size: cover;
-background-repeat: no-repeat;
-padding: 8rem 0;
+.wrap h2 {
+  width: 95%;
+  margin: 0 auto;
+  padding: 1.6rem 0;
 }
 
-.wrap-bg-white{
-    width: 100%;
-    height: 95vh;
-    background-color: rgba(255, 255, 255, 0.6);
+.wrap-bg-white {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
 
 }
 
 .wrap {
-width: 95%;
-    height: 95%;
-    margin: 0 auto;
-    padding-top: 2.5vh;
-    padding-bottom: 2.5vh;
+  width: 95%;
+  margin: 0 auto;
+  padding-top: 2.5vh;
+  padding-bottom: 2.5vh;
 }
 
-.wrap p {
-    padding: 1.6rem 0 3.2rem;
-    font-size: 1.2rem;
+.wrap p,
+table,
+li
+ {
+  padding: 1.6rem 0 3.2rem;
+  font-size: 1.2rem;
+}
+
+li {
+  padding: 0;
 }
 
 
-#product {
-background-color: rgba(255, 255, 255, 0.6);}
+#profile {
+  background-color: rgba(255, 255, 255, 0.6);
+}
 
-#product .wrap p {
-    width: 95%;
-    margin: 0 auto;
+#profile .wrap p,
+li {
+  width: 95%;
+  margin: 0 auto;
 }
 
 #about .wrap-bg {
-    background-image: url("../images/about_bg.JPG");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center top;
-    color: #000;
-    height: 100%;
+  background-image: url("../images/about_bg.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  color: #000;
+  height: 100%;
 }
 
-#about .wrap-bg-white h3,#about .wrap-bg-white p {
-width: 95%;
-margin: 0 auto;
+#about .wrap-bg-white h3,
+#about .wrap-bg-white p,
+#about li div{
+  width: 95%;
+  margin: 0 auto;
+}
+
+#about .wrap-bg-white {
+  padding: 0;
 }
 
 .site-header {
-    position: static;
+  width: 980px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .container {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    position: relative;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+}
+
+.site-header .container img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header-img {
+  position: relative;
+}
+
+.header-heading {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  top: 25%;
+  margin: 0 auto;
 }
 
 .site-header h1 {
-    width: 100%;
-    text-align: center;
-    font-size: 7.4vh;
-    position: absolute;
-    bottom: -41%;
-    line-height: 4rem;
-    z-index: 1;
+  width: 100%;
+  text-align: center;
+  font-size: 7.4vh;
+  line-height: 4rem;
+  z-index: 1;
 }
 
+.concept-wrap h3 {
+  padding-bottom: 2.5vh;
+}
 
+.concept-cont {
+  display: flex;
+  padding-bottom: 3%;
+}
 
+.concept-cont-img {
+  width: 30%;
+}
 
+.concept-cont-text {
+  padding-left: 5%;
+  width: 65%;
+  height: auto;
+}
+
+h4 {
+  padding-bottom: 0.7rem;
+}
+
+.concept-cont-text p {
+  padding-top: 0;
+}
+
+.wap-bg-black {
+  background-color: rgba(0, 0, 0, 0.6);
+}
 
 .site-footer {
-    padding: 18px 0;
-    color: #888;
-    text-align: center;
-    font-size: .9rem;
-    margin-top: 40px;
+  padding: 18px 0;
+  color: #888;
+  text-align: center;
+  font-size: .9rem;
+  margin-top: 40px;
 }
 
+.profile-img {
+  width: 40%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-image: url("../images/IMG_0256.JPG");
+  background-size: 180%;
+  background-position: center;
+  margin: 0 auto 1em;
+}
+
+.profile-text {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.profile-text th,
+.profile-text td {
+  padding-bottom: 1rem;
+}
+
+.profile-text th {
+  width: 40%;
+}
+
+.profile-text td {
+width: 60%;
+}
+
+#about li div {
+  padding: 0.5rem 1rem 2rem;
+}
 
 /* スライド */
 .swiper {
@@ -149,16 +236,55 @@ margin: 0 auto;
   height: 100%;
 }
 
+#contact {
+  width: 100%;
+}
+
+#contact div {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+/*----------------------------
+scroll_up ｜下から上へ出現
+----------------------------*/
+.scroll_up {
+  transition: 0.8s ease-in-out;
+  transform: translateY(30px);
+  opacity: 0;
+}
+.scroll_up.on {
+  transform: translateY(0);
+  opacity: 1.0;
+}
+
 /* レスポンシブ: タブレット (<=768px) */
 @media (max-width: 768px) {
-  header, main, footer {
+
+  header,
+  main,
+  footer {
     width: 100%;
     margin: 0;
   }
 
   .container {
     max-width: 100%;
-    position: relative;
+  }
+
+  /* モバイルではヘッダーとコンテンツを100%にする */
+  .site-header {
+    width: 100%;
+    margin: 0;
+  }
+
+  .wrap {
+    width: 100%;
+  }
+
+  body {
+    background-size: cover;
   }
 
   .site-header h1 {
@@ -181,20 +307,53 @@ margin: 0 auto;
     padding: 40px 0;
   }
 
-  .wrap h3, #concept div.wrap-bg h3, .wrap h3 {
+  .wrap h3,
+  .wrap h3 {
     width: 100%;
     padding: 1rem 0;
   }
 
-  .wrap p {
+  #about h3 {
+    padding: 0;
+  }
+  .wrap p,
+table,
+li {
     font-size: 1.1rem;
+  }
+
+  .concept-wrap .wrap {
+    width: 90%;
+    padding: 0;
+  }
+
+  .concept-cont {
+    display: block;
+  }
+
+  .concept-cont-img,
+  .concept-cont-text {
+    width: 100%;
+  }
+
+  .concept-cont-img {
+    padding-bottom: 2.5vh;
+  }
+
+  .concept-cont-text {
+    padding-left: 0;
+  }
+
+
+  h4 {
+    font-size: 1.3rem;
+    padding-bottom: 0.3rem;
   }
 }
 
 /* レスポンシブ: モバイル (<=375px) */
 @media (max-width: 375px) {
   .site-header h1 {
-
     padding: 18px 0;
   }
 
@@ -206,13 +365,121 @@ margin: 0 auto;
     font-size: 1.25rem;
   }
 
-  .wrap p {
+  .wrap p,
+table,
+li {
     font-size: 1rem;
     padding: 1rem 0 2rem;
+  }
+
+  li {
+    padding: 0;  
   }
 
   .site-footer {
     padding: 16px 0;
     font-size: .85rem;
   }
+
+      .concept-cont-img {
+        padding-bottom: 1vh;
+    }
+
+    .concept-cont-text p {
+    padding-top: 0;
+}
+#about {
+
+}
+}
+
+/* レスポンシブ: モバイル小 (<=425px) */
+@media (max-width: 425px) {
+
+  header,
+  main,
+  footer,
+  .site-header {
+    width: 100%;
+    margin: 0;
+  }
+
+  .wrap {
+    width: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  .site-header h1 {
+    font-size: 6.5vh;
+  }
+
+  .wrap p,
+table,
+li {
+    font-size: 0.95rem;
+  }
+      .concept-cont-img {
+        padding-bottom: 1.5vh;
+    }
+h4 {
+    font-size: 1.1rem;
+    padding-bottom: 0.3rem;
+  }
+}
+
+/* レスポンシブ: 超小 (<=320px) */
+@media (max-width: 320px) {
+
+  header,
+  main,
+  footer,
+  .site-header {
+    width: 100%;
+    margin: 0;
+  }
+
+  .wrap {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  .site-header h1 {
+    font-size: 6vh;
+  }
+
+  .wrap p,
+table,
+li {
+    font-size: 0.95rem;
+    padding: 0.8rem 0 1.4rem;
+  }
+  
+  li {
+  padding: 0;
+}
+h4 {
+    font-size: 1rem;
+  }
+
+  .concept-cont-text p {
+    padding-top: 0;
+}
 }
