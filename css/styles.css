@@ -5,7 +5,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Zen Antique", serif;
+  /* font-family: "Zen Antique", serif; */
+  /* font-family: "Noto Sans", sans-serif; */
+  font-family: "Zen Maru Gothic", sans-serif;
+  /* font-family: "Noto Sans JP", sans-serif; */
   font-weight: 400;
   font-style: normal;
 }
@@ -15,6 +18,13 @@ body,
 .bg-image-clip {
   width: 100%;
   height: 100%;
+}
+#concept h2,
+#contact h2,
+#profile h2,
+#galley h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-optical-sizing: auto;
 }
 
 .bg-image-clip {
@@ -44,6 +54,10 @@ body,
   top: 0;
   width: 100%;
   height: 100%;
+}
+
+h1 {
+  font-family: "Zen Antique", serif;
 }
 
 main,
